@@ -20,6 +20,7 @@ Plugin 'aserebryakov/vim-todo-lists'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'godlygeek/tabular'
+Plugin 'janko/vim-test'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'jparise/vim-graphql'
 Plugin 'mileszs/ack.vim'
@@ -187,5 +188,13 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll)$',
   \ }
+
+" ++++++++++++  vim-test +++++++++++++++
+
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
 
 " ============== End ==================
