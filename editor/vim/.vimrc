@@ -23,8 +23,10 @@ Plugin 'godlygeek/tabular'
 Plugin 'janko/vim-test'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'jparise/vim-graphql'
+Plugin 'junegunn/vim-easy-align'
 Plugin 'mileszs/ack.vim'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'prettier/vim-prettier'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -66,6 +68,7 @@ set title
 nnoremap t <C-]>
 
 " ++++++++++++++ Tabs ++++++++++++++++++
+filetype indent on
 
 set tabstop=2
 set shiftwidth=2
@@ -196,5 +199,16 @@ nmap <silent> t<C-f> :TestFile<CR>
 nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
+
+" ++++++++++++  prettier +++++++++++++++
+
+nmap <Leader>py <Plug>(Prettier)
+
+let g:prettier#exec_cmd_async = 1
+
+" ++++++++++++  easy-align +++++++++++++++
+
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 " ============== End ==================
